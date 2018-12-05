@@ -9,7 +9,7 @@ In order to use the project:
 1) Make a reference to it (duh).
 2) Create a class that implements IStartup.
 3) In your application root call GenericHost.CreateDefaultBuilder() and GenericHost.UseStartUp() like in this example
-`
+```
     public class Program
     {
 
@@ -26,4 +26,4 @@ In order to use the project:
             host.Dispose();
         }
     }
-`
+```
