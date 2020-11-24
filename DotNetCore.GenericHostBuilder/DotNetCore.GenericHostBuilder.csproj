@@ -9,7 +9,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>ARA.Applications.Common.Helpers.DotNetCore</RootNamespace>
+    <RootNamespace>jwpro.Helpers.DotNetCore</RootNamespace>
+    <Authors>Jason D Wilson</Authors>
+    <Company>jwpro</Company>
+    <Description>Attempts to bring consistency to the Core GenericHost when compared to the WebHost. It allows passing of a Startup class when building the host.
+
+This project tries to bring consistency to using the .Net Core Generic Host when compared to using the Web Host. It brings with it the ability to pass a StartUp class that will be used to configure the host, hosted applications, dependency injection services, and logging.</Description>
+    <Copyright>2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/JasonDWilson/DotNetCore.GenericHost</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JasonDWilson/DotNetCore.GenericHost</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Generic Host Builder</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

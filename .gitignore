@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DotNetCore.GenericHostBuilder/.cr/personal/FavoritesList
+/DotNetCore.GenericHostBuilder/.vs/DotNetCore.GenericHostBuilder/v16
