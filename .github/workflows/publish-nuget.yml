@@ -1,0 +1,23 @@
+name: Publish Nuget
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: cd DotNetCore.GenericHostBuilder && dotnet restore
+    - name: Build
+      run: cd DotNetCore.GenericHostBuilder && dotnet build --configuration Release --no-restore
+    - name: Test
+      run: cd DotNetCore.GenericHostBuilder && dotnet test --no-restore --verbosity normal
+    - name: Nuget Push
+      run: cd DotNetCore.GenericHostBuilder\bin\Release && dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{ secrets.JWPRO_NUGET_KEY }}
