@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using jwpro.Common.Helpers.DotNetCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Linq;
