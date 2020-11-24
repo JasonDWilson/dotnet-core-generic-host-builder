@@ -21,6 +21,7 @@ This project tries to bring consistency to using the .Net Core Generic Host when
     <RepositoryUrl>https://github.com/JasonDWilson/DotNetCore.GenericHost</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Generic Host Builder</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
