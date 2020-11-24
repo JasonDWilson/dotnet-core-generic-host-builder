@@ -16,8 +16,8 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: cd DotNetCore.GenericHostBuilder && dotnet build --configuration Release --no-restore
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: cd DotNetCore.GenericHostBuilder && dotnet test --no-restore --verbosity normal
     - name: Nuget Push
-      run: cd bin\Release && dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{ secrets.JWPRO_NUGET_KEY }}
+      run: cd DotNetCore.GenericHostBuilder\bin\Release && dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{ secrets.JWPRO_NUGET_KEY }}
