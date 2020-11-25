@@ -1,13 +1,14 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using jwpro.Common.Helpers.DotNetCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Linq;
 
-namespace ARA.Applications.Common.Helpers.DotNetCore
+namespace jwpro.Helpers.DotNetCore
 {
     /// <summary>
-    /// GenericHost class is used to replicate the configuration of Microsoft's WebHost
-    /// in that you can pass it a Startup Class to configure the host and application
+    /// GenericHost class is used to replicate the configuration of Microsoft's WebHost in that you can pass it a
+    /// Startup Class to configure the host and application
     /// </summary>
     public static class GenericHost
     {
@@ -15,21 +16,24 @@ namespace ARA.Applications.Common.Helpers.DotNetCore
         {
             var builder = new HostBuilder();
 
-            if (args != null)
+            if(args != null)
             {
-                builder.ConfigureHostConfiguration(configHost =>
-                {
-                    configHost.AddCommandLine(args);
-                });
-                builder.ConfigureAppConfiguration((hostContext, configApp) =>
-                {
-                    configApp.AddCommandLine(args);
-                });
+                builder.ConfigureHostConfiguration(
+                    configHost =>
+                    {
+                        configHost.AddCommandLine(args);
+                    });
+                builder.ConfigureAppConfiguration(
+                    (hostContext, configApp) =>
+                    {
+                        configApp.AddCommandLine(args);
+                    });
             }
             return builder;
         }
 
-        public static IHostBuilder UseStartup<TStartupType>(this IHostBuilder builder) where TStartupType : IStartUp
+        public static IHostBuilder UseStartup<TStartupType>(this IHostBuilder builder)
+            where TStartupType : IStartUp
         {
             var startup = (TStartupType)Activator.CreateInstance(typeof(TStartupType));
             builder.ConfigureHostConfiguration(startup.ConfigureHost);
@@ -38,6 +42,5 @@ namespace ARA.Applications.Common.Helpers.DotNetCore
             builder.ConfigureLogging(startup.ConfigureLogging);
             return builder;
         }
-
     }
 }
