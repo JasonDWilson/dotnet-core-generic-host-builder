@@ -1,6 +1,0 @@
-C:\Source\ara\Applications\Common\Main\Helpers\DotNetCore\DotNetCore.GenericHostBuilder\obj\Debug\netstandard2.0\DotNetCore.GenericHostBuilder.csproj.CoreCompileInputs.cache
-C:\Source\ara\Applications\Common\Main\Helpers\DotNetCore\DotNetCore.GenericHostBuilder\obj\Debug\netstandard2.0\DotNetCore.GenericHostBuilder.AssemblyInfoInputs.cache
-C:\Source\ara\Applications\Common\Main\Helpers\DotNetCore\DotNetCore.GenericHostBuilder\obj\Debug\netstandard2.0\DotNetCore.GenericHostBuilder.AssemblyInfo.cs
-C:\Source\ara\Applications\Common\Main\Helpers\DotNetCore\DotNetCore.GenericHostBuilder\bin\Debug\netstandard2.0\DotNetCore.GenericHostBuilder.deps.json
-C:\Source\ara\Applications\Common\Main\Helpers\DotNetCore\DotNetCore.GenericHostBuilder\bin\Debug\netstandard2.0\DotNetCore.GenericHostBuilder.dll
-C:\Source\ara\Applications\Common\Main\Helpers\DotNetCore\DotNetCore.GenericHostBuilder\obj\Debug\netstandard2.0\DotNetCore.GenericHostBuilder.csprojAssemblyReference.cache
